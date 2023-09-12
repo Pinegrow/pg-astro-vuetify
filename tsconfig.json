@@ -1,0 +1,18 @@
+{
+  "extends": "astro/tsconfigs/base",
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["src/*"],
+      "~/*": ["src/*"],
+      "~~/*": ["*"]
+    },
+    "types": ["node", "vuetify"],
+    "jsxImportSource": "preact",
+    "strict": false,
+    "allowJs": true
+  },
+  "include": ["themes/**/*", "vuetify.config.ts"],
+  "exclude": ["**/node_modules/**", "**/dist/**"]
+}
