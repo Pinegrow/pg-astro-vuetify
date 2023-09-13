@@ -29,10 +29,7 @@
       src="https://images.unsplash.com/photo-1654870468927-92c943da24fe?crop=entropy&cs=srgb&fm=jpg&ixid=M3wyMDkyMnwwfDF8c2VhcmNofDEzfHxiYWtlcnklMjBjb2ZmZWV8ZW58MHx8fHwxNjkzNTcxNzY4fDA&ixlib=rb-4.0.3&q=85"
     ></v-img>
     <v-card-item>
-      <div class="d-flex justify-space-between">
-        <v-card-title class="text-primary">Cafe Badilico</v-card-title>
-        <DarkModeSwitch style="z-index: 1"></DarkModeSwitch>
-      </div>
+      <v-card-title class="text-primary">Cafe Badilico</v-card-title>
       <v-card-subtitle
         ><span class="me-1 text-secondary">Local Favorite</span>
         <v-icon color="error" icon="mdi-fire-circle" size="small"></v-icon>
