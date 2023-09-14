@@ -47,7 +47,7 @@
         content: 'summary',
       },
     ],
-    script: [{ children: checkDarkTheme, once: true } as TurboScript],
+    script: [{ innerHTML: checkDarkTheme, once: true } as TurboScript],
     link: [
       {
         rel: 'icon',
