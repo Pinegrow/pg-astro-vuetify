@@ -1,8 +1,6 @@
 <template>
   <v-app>
-    <v-main>
-      <SampleCard />
-    </v-main>
+    <v-main> A Fresh Start! </v-main>
   </v-app>
 </template>
 <style></style>
