@@ -8,17 +8,6 @@
 
   import { pg_font_urls } from '~~/themes/pg-vuetify/tokens.mjs'
 
-  const { title, description } = site
-
-  useSeoMeta({
-    title,
-    ogTitle: title,
-    description,
-    ogDescription: description,
-    ogImage: 'https://example.com/image.png',
-    twitterCard: 'summary_large_image',
-  })
-
   const link: any = [
     {
       rel: 'icon',
@@ -47,6 +36,17 @@
       `<link rel="stylesheet" crossorigin="anonymous" href="${pg_font_urls.toString()}" />`,
     )
   }
+
+  const { title, description } = site
+
+  useSeoMeta({
+    title,
+    ogTitle: title,
+    description,
+    ogDescription: description,
+    ogImage: 'https://example.com/image.png',
+    twitterCard: 'summary_large_image',
+  })
 
   useHead({
     titleTemplate: (titleChunk) => {

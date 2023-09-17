@@ -31,7 +31,7 @@ export default defineConfig({
         vuetify: {
           /* Please ensure that you update the filenames and paths to accurately match those used in your project. */
           configPath: 'vuetify.config.ts', // or file where vuetify is created
-          cssPath: '@/assets/css/main.css',
+          // cssPath: '@/assets/css/main.css',
           // utilities: false,
           restartOnThemeUpdate: true,
         },
