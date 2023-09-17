@@ -28,8 +28,8 @@ const lightTheme: ThemeDefinition = {
     'on-surface-variant': pg_colors.neutral['900'],
   },
   variables: {
-    'border-color': '#000000',
-    'border-opacity': 0.12,
+    // 'border-color': '#000000',
+    // 'border-opacity': 0.12,
   },
 }
 
@@ -56,8 +56,8 @@ const darkTheme: ThemeDefinition = {
   },
 
   variables: {
-    'border-color': '#ffffff',
-    'border-opacity': 0.12,
+    // 'border-color': '#000000',
+    // 'border-opacity': 0.12,
   },
 }
 

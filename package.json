@@ -47,7 +47,7 @@
     "@iconify/json": "^2.2.51",
     "@nuxt/eslint-config": "^0.1.1",
     "@pinegrow/astro-module": "^3.0.18",
-    "@pinegrow/vuetify-plugin": "^3.0.24",
+    "@pinegrow/vuetify-plugin": "^3.0.31",
     "@types/node": "^20.5.0",
     "@unocss/preset-icons": "^0.51.4",
     "@vue/devtools": "^6.5.0",

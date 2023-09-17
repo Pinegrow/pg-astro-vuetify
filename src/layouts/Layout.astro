@@ -20,7 +20,7 @@ const currentPath = Astro.url.pathname
   </head>
   <body>
     <div class="relative">
-      <MetaTags />
+      <MetaTags client:load />
       <div class="d-flex flex-column bg-background text-on-background">
         <!-- <NavBar
           class={currentPath === '/' ? 'position-absolute' : ''}
