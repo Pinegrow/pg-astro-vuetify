@@ -13,12 +13,13 @@ import type { App } from 'vue'
 import '@/assets/css/main.css'
 import 'prismjs/themes/prism-tomorrow.css'
 
-import pinia from '@/plugins/pinia'
-import head from '@/plugins/head'
-import vuetify from './plugins/vuetify'
+// import pinia from '@/plugins/pinia'
+// import head from '@/plugins/head'
+// import vuetify from './plugins/vuetify'
 
 export default (app: App) => {
-  app.use(pinia)
-  app.use(head)
-  app.use(vuetify)
+  // // NOTE: Moved these into HomePage.vue & MetaTags.vue islands
+  // app.use(pinia)
+  // app.use(head)
+  // app.use(vuetify)
 }

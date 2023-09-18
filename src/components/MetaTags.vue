@@ -6,6 +6,13 @@
   import type { Script } from '@unhead/schema'
   type TurboScript = Script & { once: true }
 
+  import { getCurrentInstance } from 'vue'
+
+  import head from '@/plugins/head'
+
+  const app = getCurrentInstance().appContext.app
+  app.use(head)
+
   import { pg_font_urls } from '~~/themes/pg-vuetify/tokens.mjs'
 
   const link: any = [
