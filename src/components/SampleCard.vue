@@ -1,70 +1,84 @@
 <script setup lang="ts">
   import { ref } from 'vue'
-  const loading = ref(false)
-  const selection = ref(1)
+  // import { getCurrentInstance } from 'vue'
+  // import vuetify from '@/plugins/vuetify'
+  import { useHero } from '@/composables/hero'
 
-  const reserve = () => {
-    loading.value = true
+  // const app = getCurrentInstance().appContext.app
+  // app.use(vuetify)
 
-    setTimeout(() => (loading.value = false), 2000)
+  const { heroImageSrc } = useHero()
+
+  const availableTimeSlots = ['3.30PM', '4.20PM', '5.50PM', '6.00PM']
+  const selectedTimeSlot = ref(0)
+
+  const statusDisplay = ref(false)
+  const showStatus = (status) => {
+    statusDisplay.value = status
   }
 </script>
 <template>
-  <v-card
-    :loading="loading"
-    class="mx-auto my-12"
-    max-width="374"
-    elevation="4"
-  >
-    <template #loader="{ isActive }">
-      <v-progress-linear
-        :active="isActive"
-        color="deep-purple"
-        indeterminate
-      ></v-progress-linear>
-    </template>
-    <v-img
-      cover
-      height="250"
-      src="https://images.unsplash.com/photo-1654870468927-92c943da24fe?crop=entropy&cs=srgb&fm=jpg&ixid=M3wyMDkyMnwwfDF8c2VhcmNofDEzfHxiYWtlcnklMjBjb2ZmZWV8ZW58MHx8fHwxNjkzNTcxNzY4fDA&ixlib=rb-4.0.3&q=85"
-    ></v-img>
+  <v-card width="360" class="elevation-4 mt-12 mx-auto">
+    <v-img :src="heroImageSrc" height="250" cover></v-img>
     <v-card-item>
-      <v-card-title class="text-primary">Cafe Badilico</v-card-title>
-      <v-card-subtitle>
-        <span class="me-1 text-secondary">Local Favorite</span>
-        <v-icon color="error" icon="mdi-fire-circle" size="small"></v-icon>
-      </v-card-subtitle>
-    </v-card-item>
-    <v-card-text class="">
-      <v-row align="center" class="mx-0">
-        <v-rating
-          :model-value="4.5"
-          color="amber"
-          density="compact"
-          half-increments
-          readonly
+      <template #title>
+        <span class="text-primary">Cafe Bella Vista</span>
+      </template>
+      <template #subtitle>
+        <span>Local Favourite</span>
+        <v-icon
+          icon="i-ic-round-local-fire-department"
+          class="bg-red-darken-4 ml-2 text-red-darken-2"
           size="small"
+        ></v-icon>
+      </template>
+      <div class="align-center d-flex">
+        <v-rating
+          density="compact"
+          size="small"
+          color="amber-darken-2"
+          model-value="4.5"
+          half-increments
         ></v-rating>
-        <div class="text-grey ms-4">4.5 (413)</div>
-      </v-row>
-      <div class="my-4 text-subtitle-1">$ • Italian, Cafe</div>
-      <div class="">
-        Small plates, salads & sandwiches - an intimate setting with 12 indoor
-        seats plus patio seating.
+        <span class="ml-2 mt-2 text-caption text-medium-emphasis"
+          >4.5 (413)</span
+        >
       </div>
+      <div class="mt-2 text-subtitle-1"><span>$ . Italian, Cafe</span></div>
+    </v-card-item>
+    <v-card-text>
+      <div class="mt-1">
+        <span
+          >Small plates, salads & sandwiches - an intimate setting with 12
+          indoor seats plus patio seating.</span
+        >
+      </div>
+      <v-divider class="mt-4"></v-divider>
     </v-card-text>
-    <v-divider class="mx-4 mb-1"></v-divider>
-    <v-card-title>Tonight's availability</v-card-title>
-    <div class="px-4">
-      <v-chip-group v-model="selection">
-        <v-chip>5:30PM</v-chip>
-        <v-chip>7:30PM</v-chip>
-        <v-chip>8:00PM</v-chip>
-        <v-chip>9:00PM</v-chip>
+    <v-card-item>
+      <template #title>
+        <span>Tonight's availability</span>
+      </template>
+      <v-chip-group v-model="selectedTimeSlot" class="mt-2">
+        <v-chip
+          v-for="(timeSlot, index) in availableTimeSlots"
+          :key="index"
+          :text="timeSlot"
+        ></v-chip>
       </v-chip-group>
-    </div>
+    </v-card-item>
     <v-card-actions>
-      <v-btn color="primary" variant="tonal" @click="reserve"> Reserve </v-btn>
+      <v-btn
+        text="Reserve"
+        variant="tonal"
+        class="mb-2 ml-2"
+        @click="showStatus(true)"
+      ></v-btn>
+      <v-snackbar v-model="statusDisplay" timeout="2000">
+        <span class="text-white w-100"
+          >{{ availableTimeSlots[selectedTimeSlot] }} was reserved.</span
+        >
+      </v-snackbar>
     </v-card-actions>
   </v-card>
 </template>

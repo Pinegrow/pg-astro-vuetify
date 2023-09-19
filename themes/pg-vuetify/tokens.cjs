@@ -2,46 +2,46 @@
 
 const pg_colors = {
   primary: {
-    50: '#f6f0ed',
-    100: '#efddd3',
-    200: '#e7cab8',
-    300: '#deb79f',
-    400: '#d5a486',
-    500: '#ca926d',
-    600: '#bf8055',
-    700: '#af754e',
-    800: '#9f6b47',
-    900: '#8f6040',
-    950: '#805639',
-    DEFAULT: '#714c32',
+    50: '#fcecec',
+    100: '#ffd0cc',
+    200: '#ffb4ad',
+    300: '#fe968e',
+    400: '#f97871',
+    500: '#f35655',
+    600: '#ea293a',
+    700: '#d62635',
+    800: '#c32230',
+    900: '#b01f2c',
+    950: '#9d1c27',
+    DEFAULT: '#8a1822',
   },
   secondary: {
-    50: '#ecebeb',
-    100: '#cdc3c0',
-    200: '#af9d97',
-    300: '#917870',
-    400: '#73544a',
-    500: '#553328',
-    600: '#381404',
-    700: '#331304',
-    800: '#2e1103',
-    900: '#2a1003',
-    950: '#250e03',
-    DEFAULT: '#210c02',
+    50: '#efeceb',
+    100: '#decbc3',
+    200: '#ccaa9c',
+    300: '#b98b77',
+    400: '#a46c53',
+    500: '#8e4e31',
+    600: '#763110',
+    700: '#6c2d0f',
+    800: '#62290e',
+    900: '#58250d',
+    950: '#4f210c',
+    DEFAULT: '#461d09',
   },
   tertiary: {
-    50: '#fcf6f0',
-    100: '#faecde',
-    200: '#f8e2cb',
-    300: '#f5d8b8',
-    400: '#f1cea6',
-    500: '#edc494',
-    600: '#e9ba82',
-    700: '#d5aa77',
-    800: '#c29b6c',
-    900: '#af8c62',
-    950: '#9c7d57',
-    DEFAULT: '#8a6e4d',
+    50: '#fef5f1',
+    100: '#feeade',
+    200: '#fedfcc',
+    300: '#fdd4ba',
+    400: '#fbc9a8',
+    500: '#f9bf97',
+    600: '#f6b485',
+    700: '#e1a57a',
+    800: '#cd966f',
+    900: '#b98764',
+    950: '#a57959',
+    DEFAULT: '#926a4f',
   },
   success: {
     50: '#ecf0ec',
@@ -116,26 +116,26 @@ const pg_colors = {
 }
 
 const pg_fonts = {
-  sans: ['"Lucida Sans Unicode", "Lucida Grande", sans-serif'],
-  serif: ["'Fira Sans', sans-serif"],
+  sans: ["'Inter', sans-serif"],
+  serif: ["'Caveat Brush', sans-serif"],
 }
 
 const pg_font_urls = [
-  'https://fonts.googleapis.com/css?family=Fira+Sans:100,200,300,400,500,600,700,800,900&display=swap',
+  'https://fonts.googleapis.com/css?family=Inter:100,200,300,400,500,600,700,800,900|Caveat+Brush&display=swap',
 ]
 
 const pg_backgrounds = {
   'design-image':
-    "url('https://images.unsplash.com/photo-1682685797736-dabb341dc7de?ixid=M3wyMDkyMnwxfDF8c2VhcmNofDF8fHdhbGxwYXBlcnxlbnwwfHx8fDE2OTQ4NzMwMTB8MA&ixlib=rb-4.0.3q=85&fm=jpg&crop=faces&cs=srgb&w=1200&fit=max')",
+    "url('https://images.unsplash.com/photo-1654870468927-92c943da24fe?crop=entropy&cs=srgb&fm=jpg&ixid=M3wyMDkyMnwwfDF8c2VhcmNofDQ5fHxiYWtlcnklMjBjYWtlfGVufDB8fHx8MTY5NTA5NzYyNXww&ixlib=rb-4.0.3&q=85')",
   'design-image-large':
-    "url('https://images.unsplash.com/photo-1682685797736-dabb341dc7de?ixid=M3wyMDkyMnwxfDF8c2VhcmNofDF8fHdhbGxwYXBlcnxlbnwwfHx8fDE2OTQ4NzMwMTB8MA&ixlib=rb-4.0.3q=85&fm=jpg&crop=faces&cs=srgb&w=2000&fit=max')",
+    "url('https://images.unsplash.com/photo-1654870468927-92c943da24fe?crop=entropy&cs=srgb&fm=jpg&ixid=M3wyMDkyMnwwfDF8c2VhcmNofDQ5fHxiYWtlcnklMjBjYWtlfGVufDB8fHx8MTY5NTA5NzYyNXww&ixlib=rb-4.0.3&q=85')",
 }
 
 const pg_background_urls = {
   'design-image':
-    'https://images.unsplash.com/photo-1682685797736-dabb341dc7de?ixid=M3wyMDkyMnwxfDF8c2VhcmNofDF8fHdhbGxwYXBlcnxlbnwwfHx8fDE2OTQ4NzMwMTB8MA&ixlib=rb-4.0.3q=85&fm=jpg&crop=faces&cs=srgb&w=1200&fit=max',
+    'https://images.unsplash.com/photo-1654870468927-92c943da24fe?crop=entropy&cs=srgb&fm=jpg&ixid=M3wyMDkyMnwwfDF8c2VhcmNofDQ5fHxiYWtlcnklMjBjYWtlfGVufDB8fHx8MTY5NTA5NzYyNXww&ixlib=rb-4.0.3&q=85',
   'design-image-large':
-    'https://images.unsplash.com/photo-1682685797736-dabb341dc7de?ixid=M3wyMDkyMnwxfDF8c2VhcmNofDF8fHdhbGxwYXBlcnxlbnwwfHx8fDE2OTQ4NzMwMTB8MA&ixlib=rb-4.0.3q=85&fm=jpg&crop=faces&cs=srgb&w=2000&fit=max',
+    'https://images.unsplash.com/photo-1654870468927-92c943da24fe?crop=entropy&cs=srgb&fm=jpg&ixid=M3wyMDkyMnwwfDF8c2VhcmNofDQ5fHxiYWtlcnklMjBjYWtlfGVufDB8fHx8MTY5NTA5NzYyNXww&ixlib=rb-4.0.3&q=85',
 }
 
 /* Pinegrow generated Design Panel End */
