@@ -1,6 +1,4 @@
 ---
-import '../assets/vuetify/main.scss' // If customizing Vuetify sass variables
-
 import MetaTags from '../components/MetaTags.vue'
 export interface Props {
   title: string
@@ -20,7 +18,7 @@ const currentPath = Astro.url.pathname
   </head>
   <body>
     <div class="relative">
-      <MetaTags />
+      <MetaTags client:load />
       <div class="d-flex flex-column bg-background text-on-background">
         <!-- <NavBar
           class={currentPath === '/' ? 'position-absolute' : ''}

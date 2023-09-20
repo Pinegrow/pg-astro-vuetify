@@ -13,13 +13,15 @@ import Unocss from 'unocss/astro'
 import presetIcons from '@unocss/preset-icons'
 // import VueDevTools from 'vite-plugin-vue-devtools'
 // import myAstroModule from './src/modules/my-module'
-import Vuetify from 'vite-plugin-vuetify'
+import Vuetify, { transformAssetUrls } from 'vite-plugin-vuetify'
 
 // https://astro.build/config
 export default defineConfig({
   integrations: [
     // myAstroModule,
     vue({
+      // https://github.com/vuetifyjs/vuetify-loader/tree/master/packages/vite-plugin#image-loading
+      template: { transformAssetUrls },
       appEntrypoint: '/src/app',
     }),
     Pinegrow({
@@ -31,8 +33,9 @@ export default defineConfig({
         vuetify: {
           /* Please ensure that you update the filenames and paths to accurately match those used in your project. */
           configPath: 'vuetify.config.ts', // or file where vuetify is created
-          cssPath: '@/assets/css/main.css',
+          // themePath: false, // Set to false so that Design Panel is not used
           // utilities: false,
+          // restartOnConfigUpdate: true,
           restartOnThemeUpdate: true,
         },
         // plugins: [
@@ -60,11 +63,11 @@ export default defineConfig({
     // For details, refer to https://github.com/antfu/unplugin-auto-import#configuration
     AutoImportAPIs({
       include: [
-        /.[tj]sx?$/, // .ts, .tsx, .js, .jsx
-        /.vue$/,
-        /.vue?vue/, // .vue
-        /.md$/, // .md
-        /.mdx$/, // .mdx
+        /\.[tj]sx?$/, // .ts, .tsx, .js, .jsx
+        /\.vue$/,
+        /\.vue\?vue/, // .vue
+        /\.md$/, // .md
+        /\.mdx$/, // .mdx
       ],
       imports: [
         'vue',
@@ -120,9 +123,9 @@ export default defineConfig({
             0,
             Vuetify({
               /* If customizing sass variables of vuetify components */
-              styles: {
-                configFile: 'src/assets/vuetify/settings.scss',
-              },
+              // styles: {
+              //   configFile: 'src/assets/vuetify/settings.scss',
+              // },
               //...
             })[0],
           )
