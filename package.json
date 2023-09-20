@@ -34,6 +34,7 @@
     "@vueuse/head": "^2.0.0",
     "astro": "^2.1.7",
     "defu": "^6.1.2",
+    "lite-youtube-embed": "^0.2.0",
     "pinia": "^2.1.6",
     "preact": "^10.13.2",
     "react": "^18.2.0",

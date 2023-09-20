@@ -33,6 +33,7 @@ export default defineConfig({
         vuetify: {
           /* Please ensure that you update the filenames and paths to accurately match those used in your project. */
           configPath: 'vuetify.config.ts', // or file where vuetify is created
+          // themePath: false, // Set to false so that Design Panel is not used
           // utilities: false,
           // restartOnConfigUpdate: true,
           restartOnThemeUpdate: true,
