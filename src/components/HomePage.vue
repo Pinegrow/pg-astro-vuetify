@@ -4,6 +4,9 @@
   import pinia from '@/plugins/pinia'
   import head from '@/plugins/head'
   import vuetify from '@/plugins/vuetify'
+  import { useHero } from '@/composables/hero'
+
+  const { heroImageSrc } = useHero()
 
   const app = getCurrentInstance().appContext.app
   app.use(pinia)
