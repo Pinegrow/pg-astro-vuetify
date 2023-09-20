@@ -16,6 +16,7 @@ import 'prismjs/themes/prism-tomorrow.css'
 // import pinia from '@/plugins/pinia'
 // import head from '@/plugins/head'
 // import vuetify from './plugins/vuetify'
+import '@/plugins/youtube.client'
 
 export default (app: App) => {
   // // NOTE: Moved these into HomePage.vue & MetaTags.vue islands

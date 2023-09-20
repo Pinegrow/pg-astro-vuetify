@@ -13,6 +13,13 @@
     "strict": false,
     "allowJs": true
   },
-  "include": ["themes/**/*", "vuetify.config.ts", "src/**/*"],
+  "include": [
+    "themes/**/*",
+    "vuetify.config.ts",
+    "src/**/*",
+    "auto-imports.d.ts",
+    "components.d.ts",
+    "composables.d.ts"
+  ],
   "exclude": ["**/node_modules/**", "**/dist/**"]
 }
