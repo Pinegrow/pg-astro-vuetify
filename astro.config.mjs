@@ -21,7 +21,12 @@ export default defineConfig({
     // myAstroModule,
     vue({
       // https://github.com/vuetifyjs/vuetify-loader/tree/master/packages/vite-plugin#image-loading
-      template: { transformAssetUrls },
+      template: {
+        transformAssetUrls,
+        compilerOptions: {
+          isCustomElement: (tag) => tag === 'lite-youtube',
+        },
+      },
       appEntrypoint: '/src/app',
     }),
     Pinegrow({
