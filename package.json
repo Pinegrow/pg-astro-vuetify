@@ -10,6 +10,7 @@
   "scripts": {
     "dev": "astro dev",
     "now": "npm run build && npm run preview",
+    "lighthouse": "npx unlighthouse --site https://pg-astro-vuetify.netlify.app",
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
@@ -42,7 +43,8 @@
     "sass": "^1.66.1",
     "svelte": "^3.57.0",
     "vue": "^3.2.47",
-    "vuetify": "^3.3.15"
+    "vuetify": "^3.3.15",
+    "vee-validate": "^4.11.6"
   },
   "devDependencies": {
     "@iconify/json": "^2.2.51",
