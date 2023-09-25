@@ -1,34 +1,31 @@
+import { fileURLToPath, URL } from 'node:url'
+
 import { defineConfig } from 'astro/config'
+import mdx from '@astrojs/mdx'
+import sitemap from '@astrojs/sitemap'
 import vue from '@astrojs/vue'
 import react from '@astrojs/react'
 import preact from '@astrojs/preact'
 import svelte from '@astrojs/svelte'
-import mdx from '@astrojs/mdx'
 
 import Pinegrow from '@pinegrow/astro-module'
-import { fileURLToPath, URL } from 'node:url'
 import AutoImportComponents from 'unplugin-vue-components/vite'
 import AutoImportAPIs from 'unplugin-auto-import/astro'
 import Unocss from 'unocss/astro'
 import presetIcons from '@unocss/preset-icons'
 // import VueDevTools from 'vite-plugin-vue-devtools'
 // import myAstroModule from './src/modules/my-module'
+
 import Vuetify, { transformAssetUrls } from 'vite-plugin-vuetify'
+
+import site from './src/site'
+const { url } = site
 
 // https://astro.build/config
 export default defineConfig({
+  site: url,
   integrations: [
     // myAstroModule,
-    vue({
-      // https://github.com/vuetifyjs/vuetify-loader/tree/master/packages/vite-plugin#image-loading
-      template: {
-        transformAssetUrls,
-        compilerOptions: {
-          isCustomElement: (tag) => tag === 'lite-youtube',
-        },
-      },
-      appEntrypoint: '/src/app',
-    }),
     Pinegrow({
       liveDesigner: {
         iconPreferredCase: 'unocss',
@@ -54,6 +51,16 @@ export default defineConfig({
         // ],
       },
     }),
+    vue({
+      // https://github.com/vuetifyjs/vuetify-loader/tree/master/packages/vite-plugin#image-loading
+      template: {
+        transformAssetUrls,
+        compilerOptions: {
+          isCustomElement: (tag) => tag === 'lite-youtube',
+        },
+      },
+      appEntrypoint: '/src/app',
+    }),
     react(),
     preact(),
     svelte(),
@@ -65,6 +72,7 @@ export default defineConfig({
       ],
     }),
     mdx(),
+    sitemap(),
     // For details, refer to https://github.com/antfu/unplugin-auto-import#configuration
     AutoImportAPIs({
       include: [
@@ -98,7 +106,6 @@ export default defineConfig({
   },
   vite: {
     plugins: [
-      // Update config as per your needs
       // For details, refer to https://github.com/antfu/unplugin-vue-components#configuration
       AutoImportComponents({
         /* Please ensure that you update the filenames and paths to accurately match those used in your project. */
@@ -106,16 +113,12 @@ export default defineConfig({
         dirs: ['src/components'],
 
         // allow auto load markdown components under ./src/components/
-        // extensions: ['vue', 'jsx', 'tsx', 'js', 'ts', 'mdx', 'svelte']
         extensions: ['vue', 'md'],
 
         // allow auto import and register components used in markdown
-        include: [/\.vue$/, /\.vue\?vue/, /\.mdx?/],
+        include: [/.vue$/, /.vue?vue/, /.md$/],
 
         // resolvers: [], // Auto-import using resolvers
-
-        // transformer: 'vue3',
-
         dts: 'components.d.ts',
       }),
       {
@@ -138,6 +141,9 @@ export default defineConfig({
       },
       // VueDevTools()
     ],
+    ssr: {
+      noExternal: ['vuetify'],
+    },
     resolve: {
       alias: {
         /* Must be either an object, or an array of { find, replacement, customResolver } pairs. */
@@ -148,9 +154,6 @@ export default defineConfig({
         '~': fileURLToPath(new URL('./src', import.meta.url)),
         '~~': fileURLToPath(new URL('./', import.meta.url)),
       },
-    },
-    ssr: {
-      noExternal: ['vuetify'],
     },
   },
 })
