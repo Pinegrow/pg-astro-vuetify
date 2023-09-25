@@ -9,12 +9,6 @@
   import image from '@/screenshots/image.jpg'
   import { pg_font_urls } from '~~/themes/pg-vuetify/tokens.mjs'
 
-  import { getCurrentInstance } from 'vue'
-  import head from '@/plugins/head'
-
-  const app = getCurrentInstance().appContext.app
-  app.use(head)
-
   const link: any = [
     {
       rel: 'icon',
