@@ -10,12 +10,11 @@
 
 import type { App } from 'vue'
 // import 'uno.css' // Not required for astro unocss integration
-import '@/assets/css/main.css'
-import 'prismjs/themes/prism-tomorrow.css'
 
 // import pinia from '@/plugins/pinia'
 // import head from '@/plugins/head'
 // import vuetify from './plugins/vuetify'
+//Move to WalkThrough.vue
 import '@/plugins/youtube.client'
 
 export default (app: App) => {
