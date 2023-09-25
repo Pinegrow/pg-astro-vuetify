@@ -1,11 +1,5 @@
 <script setup lang="ts">
   import { ref } from 'vue'
-  // import { getCurrentInstance } from 'vue'
-  // import vuetify from '@/plugins/vuetify'
-
-  // const app = getCurrentInstance().appContext.app
-  // app.use(vuetify)
-
   import { pg_background_urls } from '~~/themes/pg-vuetify/tokens.mjs'
 
   const heroImageSrc =

@@ -25,6 +25,7 @@
     "@astrojs/mdx": "^0.19.7",
     "@astrojs/preact": "^2.1.0",
     "@astrojs/react": "^2.1.0",
+    "@astrojs/sitemap": "^3.0.0",
     "@astrojs/svelte": "^2.1.0",
     "@astrojs/vue": "^2.1.0",
     "@headlessui/vue": "^1.7.10",
