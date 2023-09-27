@@ -43,15 +43,15 @@
     "react-dom": "^18.2.0",
     "sass": "^1.66.1",
     "svelte": "^3.57.0",
+    "vee-validate": "^4.11.6",
     "vue": "^3.2.47",
-    "vuetify": "^3.3.15",
-    "vee-validate": "^4.11.6"
+    "vuetify": "^3.3.15"
   },
   "devDependencies": {
     "@iconify/json": "^2.2.51",
     "@nuxt/eslint-config": "^0.1.1",
-    "@pinegrow/astro-module": "^3.0.18",
-    "@pinegrow/vuetify-plugin": "^3.0.34",
+    "@pinegrow/astro-module": "^3.0.21",
+    "@pinegrow/vuetify-plugin": "^3.0.42",
     "@types/node": "^20.5.0",
     "@unocss/preset-icons": "^0.51.4",
     "@vue/devtools": "^6.5.0",
