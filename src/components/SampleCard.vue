@@ -2,7 +2,7 @@
   import { ref } from 'vue'
   import { pg_background_urls } from '~~/themes/pg-vuetify/tokens.mjs'
 
-  const heroImageSrc =
+  const heroImageUrl =
     pg_background_urls['design-image-large'] ||
     pg_background_urls['design-image']
 
@@ -16,7 +16,7 @@
 </script>
 <template>
   <v-card width="360" class="elevation-4 mt-12 mx-auto">
-    <v-img :src="heroImageSrc" height="250" cover></v-img>
+    <v-img :src="heroImageUrl" height="250" cover></v-img>
     <v-card-item>
       <template #title>
         <div class="d-flex justify-space-between">
