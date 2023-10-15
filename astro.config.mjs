@@ -54,7 +54,25 @@ export default defineConfig({
     vue({
       // https://github.com/vuetifyjs/vuetify-loader/tree/master/packages/vite-plugin#image-loading
       template: {
-        transformAssetUrls,
+        transformAssetUrls: {
+          ...transformAssetUrls,
+          'v-carousel-item': [
+            'src',
+            'lazySrc',
+            'srcset',
+            ':src',
+            ':lazySrc',
+            ':srcset',
+          ],
+          'v-card': [
+            'image',
+            'prependAvatar',
+            'appendAvatar',
+            ':image',
+            ':prependAvatar',
+            ':appendAvatar',
+          ],
+        },
         compilerOptions: {
           isCustomElement: (tag) => tag === 'lite-youtube',
         },
