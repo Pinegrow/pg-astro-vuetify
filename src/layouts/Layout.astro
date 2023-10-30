@@ -1,10 +1,9 @@
 ---
-import MetaTags from '../components/MetaTags.vue'
-// import NavBar from '../components/NavBar.vue'
-// import TheFooter from '../components/TheFooter.vue'
+import BaseHead from '@/components/BaseHead.astro'
 
-import '../assets/css/main.css'
-import 'prismjs/themes/prism-tomorrow.css'
+import Header from '@/components/Header.astro'
+import Footer from '@/components/Footer.astro'
+import {SITE_TITLE, SITE_DESCRIPTION} from '@/consts'
 
 export interface Props {
   title: string
@@ -12,31 +11,15 @@ export interface Props {
 const { title } = Astro.props
 const currentPath = Astro.url.pathname
 ---
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="generator" content="{Astro.generator}" />
-    <title>{title}</title>
+    <BaseHead title={title || SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
   <body>
-    <div class="relative">
-      <MetaTags client:load />
-      <div class="d-flex flex-column bg-background text-on-background">
-        <!-- <NavBar
-          class={currentPath === '/' ? 'position-absolute' : ''}
-          style={currentPath === '/' ? 'background-color:transparent;z-index: 10;' : ''}
-          client:load
-        /> -->
-        <!-- <div class="shadow"> -->
+    <Header title={SITE_TITLE} />
         <slot />
-        <!-- </div> -->
-        <!-- <TheFooter /> -->
-      </div>
-    </div>
+        <Footer />
   </body>
 </html>
 

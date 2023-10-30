@@ -1,23 +1,8 @@
 <script setup lang="ts">
-  // import { ssrClientHintsConfiguration } from 'virtual:vuetify-ssr-client-hints-configuration'
-
   import { isDark, toggleDark } from '@/composables/dark'
   import { useTheme } from 'vuetify'
 
-  // const ssrClientHints = useNuxtApp().$ssrClientHints
-  // const { width, height, md } = useDisplay()
   const theme = useTheme()
-
-  // const enableToogleTheme = computed(() => {
-  //   if (
-  //     ssrClientHintsConfiguration.prefersColorScheme &&
-  //     ssrClientHintsConfiguration.prefersColorSchemeOptions
-  //   )
-  //     return !ssrClientHintsConfiguration.prefersColorSchemeOptions
-  //       .useBrowserThemeOnly
-  //   return false
-  // })
-
   const toggleTheme = () => {
     toggleDark()
     theme.global.name.value = isDark.value ? 'dark' : 'light'

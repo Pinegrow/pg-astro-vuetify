@@ -1,10 +1,9 @@
 ---
-import Layout from '../layouts/Layout.astro'
-import HomePage from '../components/HomePage.vue'
-const name = "I'm a hero!"
+import Layout from '@/layouts/Layout.astro'
+import PageHome from '@/components/PageHome.vue'
 ---
 
 <Layout title="Home">
-  <HomePage client:load />
+  <PageHome client:load />
 </Layout>
 <style></style>
