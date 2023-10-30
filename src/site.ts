@@ -13,4 +13,5 @@ export default {
   twitter: '@vuedesigner',
   trailingSlash: false, // default
   titleSeparator: '|', // default
+  nav: [{ text: 'Home', link: '/' }],
 }
