@@ -1,6 +1,6 @@
 // import { md3 } from 'vuetify/blueprints'
 import { aliases, mdi as mdisvg } from 'vuetify/iconsets/mdi-svg'
-import { lightTheme, darkTheme } from './src/utils/theme'
+import { lightTheme, darkTheme } from '@/utils/theme'
 // import { VuetifyOptions } from 'vuetify'
 
 export default {

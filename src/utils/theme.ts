@@ -1,9 +1,9 @@
-import { ThemeDefinition } from 'vuetify'
+import type { ThemeDefinition } from 'vuetify'
 import {
   pg_colors,
   // pg_fonts,
   // pg_backgrounds,
-} from '~~/themes/pg-vuetify/tokens.mjs'
+} from '../../themes/pg-vuetify/tokens.mjs'
 
 // Customize light and dark themes
 const lightTheme: ThemeDefinition = {

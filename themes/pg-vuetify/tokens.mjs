@@ -1,3 +1,6 @@
+/* eslint-disable */
+/* prettier-disable */
+/* @ts-nocheck */
 /* Pinegrow generated Design Panel Begin */
 
 const pg_colors = {
@@ -128,10 +131,6 @@ const pg_backgrounds = {
 }
 
 /* Pinegrow generated Design Panel End */
-
-/* eslint-disable */
-/* prettier-disable */
-/* @ts-nocheck */
 
 const pg_font_urls = [
   'https://fonts.googleapis.com/css?family=Inter:100,200,300,400,500,600,700,800,900|Caveat+Brush&display=swap',

@@ -1,7 +1,15 @@
 {
   "extends": "astro/tsconfigs/base",
   "compilerOptions": {
-    "jsx": "react-jsx",
+    "target": "esnext",
+    "useDefineForClassFields": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "sourceMap": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
     "baseUrl": "./",
     "paths": {
       "@/*": ["src/*"],
@@ -9,17 +17,11 @@
       "~~/*": ["*"]
     },
     "types": ["node", "vuetify"],
-    "jsxImportSource": "preact",
-    "strict": false,
-    "allowJs": true
+    "jsxImportSource": "solid-js",
+    "lib": ["esnext", "dom", "dom.iterable", "scripthost"],
+    "skipLibCheck": true,
+    "allowJs": true,
+    "strict": false
   },
-  "include": [
-    "themes/**/*",
-    "vuetify.config.ts",
-    "src/**/*",
-    "auto-imports.d.ts",
-    "components.d.ts",
-    "composables.d.ts"
-  ],
   "exclude": ["**/node_modules/**", "**/dist/**"]
 }

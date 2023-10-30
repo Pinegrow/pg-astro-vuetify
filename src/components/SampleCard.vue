@@ -1,10 +1,6 @@
 <script setup lang="ts">
   import { ref } from 'vue'
-  import { pg_background_urls } from '~~/themes/pg-vuetify/tokens.mjs'
-
-  const heroImageUrl =
-    pg_background_urls['design-image-large'] ||
-    pg_background_urls['design-image']
+  import { heroImageUrl } from '@/utils/hero'
 
   const availableTimeSlots = ['3.30PM', '4.20PM', '5.50PM', '6.00PM']
   const selectedTimeSlot = ref(0)
@@ -16,7 +12,7 @@
 </script>
 <template>
   <v-card width="360" class="elevation-4 mt-12 mx-auto">
-    <v-img :src="heroImageUrl" height="250" cover></v-img>
+    <v-img height="250" cover :src="heroImageUrl"></v-img>
     <v-card-item>
       <template #title>
         <div class="d-flex justify-space-between">
