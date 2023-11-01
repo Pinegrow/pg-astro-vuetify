@@ -10,8 +10,8 @@
   "scripts": {
     "dev": "astro dev",
     "now": "npm run build && npm run preview",
-    "lighthouse": "npx unlighthouse --site http://localhost:4321",
-    "lighthouse:prod": "npx unlighthouse --site https://pg-astro-vuetify.netlify.app",
+    "lighthouse:dev": "npx unlighthouse --site http://localhost:4321",
+    "lighthouse": "npx unlighthouse --site https://pg-astro-vuetify.netlify.app",
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
