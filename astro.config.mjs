@@ -3,9 +3,9 @@ import { defineConfig } from 'astro/config'
 import mdx from '@astrojs/mdx'
 import sitemap from '@astrojs/sitemap'
 import vue from '@astrojs/vue'
-import preact from '@astrojs/preact'
+// import preact from '@astrojs/preact'
+// import react from '@astrojs/react'
 import solidJs from '@astrojs/solid-js'
-import react from '@astrojs/react'
 import svelte from '@astrojs/svelte'
 import Pinegrow from '@pinegrow/astro-module'
 import AutoImportComponents from 'unplugin-vue-components/vite'
@@ -13,9 +13,8 @@ import AutoImportAPIs from 'unplugin-auto-import/astro'
 import Unocss from 'unocss/astro'
 import presetIcons from '@unocss/preset-icons'
 // import VueDevTools from 'vite-plugin-vue-devtools'
-// import vuetifyModule from './src/modules/vuetify-module'
+// import myAstroModule from './src/modules/my-module'
 
-import Vuetify, { transformAssetUrls } from 'vite-plugin-vuetify'
 import site from './src/site'
 const { url } = site
 
@@ -23,42 +22,21 @@ const { url } = site
 export default defineConfig({
   site: url,
   integrations: [
+    // myAstroModule,
     vue({
-      // https://github.com/vuetifyjs/vuetify-loader/tree/master/packages/vite-plugin
-      // https://github.com/vuetifyjs/vuetify-loader/issues/317
+      appEntrypoint: '/src/app',
       template: {
-        transformAssetUrls: {
-          ...transformAssetUrls,
-          'v-carousel-item': [
-            'src',
-            'lazySrc',
-            'srcset',
-            ':src',
-            ':lazySrc',
-            ':srcset',
-          ],
-          'v-card': [
-            'image',
-            'prependAvatar',
-            'appendAvatar',
-            ':image',
-            ':prependAvatar',
-            ':appendAvatar',
-          ],
-        },
         compilerOptions: {
           isCustomElement: (tag) => tag === 'lite-youtube',
         },
       },
-      appEntrypoint: '/src/app',
     }),
-    // vuetifyModule(), // This is throwing some error - no loader for fsevents.node, so adding vuetify plugin directly under vite plugins array (below)
-    preact({
-      include: ['**/preact/*'],
-    }),
-    react({
-      include: ['**/react/*'],
-    }),
+    // preact({
+    //   include: ['**/preact/*'],
+    // }),
+    // react({
+    //   include: ['**/react/*'],
+    // }),
     solidJs({
       include: ['**/solid/*'],
     }),
@@ -100,7 +78,7 @@ export default defineConfig({
         /* Please ensure that you update the filenames and paths to accurately match those used in your project. */
         'src/composables',
         'src/utils',
-        // 'src/stores',
+        'src/stores',
       ],
       vueTemplate: true,
       dts: 'auto-imports.d.ts',
@@ -108,7 +86,7 @@ export default defineConfig({
     Pinegrow({
       liveDesigner: {
         iconPreferredCase: 'unocss', // default value (can be removed), unocss by default uses the unocss format for icon names
-        devtoolsKey: 'devtools', // see app.ts
+        devtoolsKey: 'devtoolsKey', // see app.ts
         vuetify: {
           /* Please ensure that you update the filenames and paths to accurately match those used in your project. */
           configPath: 'vuetify.config.ts', // or file where vuetify is created
@@ -129,11 +107,6 @@ export default defineConfig({
       },
     }),
   ],
-
-  build: {
-    inlineStylesheets: 'never', // or "always", or "auto"
-  },
-
   vite: {
     plugins: [
       // For details, refer to https://github.com/antfu/unplugin-vue-components#configuration
@@ -146,26 +119,6 @@ export default defineConfig({
         // resolvers: [], // Auto-import using resolvers
         dts: 'components.d.ts',
       }),
-      {
-        name: 'vuetify-plugin',
-        configResolved(config) {
-          const idx_vue = config.plugins.findIndex(
-            (plugin) => plugin.name && plugin.name === 'vite:vue',
-          )
-          //@ts-ignore
-          config.plugins.splice(
-            idx_vue + 1,
-            0,
-            Vuetify({
-              /* If customizing sass variables of vuetify components */
-              // styles: {
-              //   configFile: 'src/assets/vuetify/settings.scss',
-              // },
-              //...
-            })[0],
-          )
-        },
-      },
       // VueDevTools()
     ],
 
