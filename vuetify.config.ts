@@ -1,7 +1,7 @@
 // import { md3 } from 'vuetify/blueprints'
 import { aliases, mdi as mdisvg } from 'vuetify/iconsets/mdi-svg'
 import { lightTheme, darkTheme } from '@/utils/theme'
-// import { VuetifyOptions } from 'vuetify'
+import type { VuetifyOptions } from 'vuetify'
 
 export default {
   // blueprint: md3,
@@ -129,4 +129,4 @@ export default {
     },
   },
   localeMessages: ['en', 'es', 'ar'], */
-} as any // as VuetifyOptions
+} as VuetifyOptions

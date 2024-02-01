@@ -10,10 +10,12 @@ import svelte from '@astrojs/svelte'
 import Pinegrow from '@pinegrow/astro-module'
 import AutoImportComponents from 'unplugin-vue-components/vite'
 import AutoImportAPIs from 'unplugin-auto-import/astro'
-import Unocss from 'unocss/astro'
+import Unocss from 'unocss/vite'
 import presetIcons from '@unocss/preset-icons'
 // import VueDevTools from 'vite-plugin-vue-devtools'
 // import myAstroModule from './src/modules/my-module'
+
+import Vuetify, { transformAssetUrls } from 'vite-plugin-vuetify'
 
 import site from './src/site'
 const { url } = site
@@ -26,6 +28,26 @@ export default defineConfig({
     vue({
       appEntrypoint: '/src/app',
       template: {
+        // https://github.com/vuetifyjs/vuetify-loader/tree/master/packages/vite-plugin#image-loading
+        transformAssetUrls: {
+          ...transformAssetUrls,
+          'v-carousel-item': [
+            'src',
+            'lazySrc',
+            'srcset',
+            ':src',
+            ':lazySrc',
+            ':srcset',
+          ],
+          'v-card': [
+            'image',
+            'prependAvatar',
+            'appendAvatar',
+            ':image',
+            ':prependAvatar',
+            ':appendAvatar',
+          ],
+        },
         compilerOptions: {
           isCustomElement: (tag) => tag === 'lite-youtube',
         },
@@ -41,18 +63,6 @@ export default defineConfig({
       include: ['**/solid/*'],
     }),
     svelte(),
-    Unocss({
-      presets: [
-        presetIcons({
-          prefix: 'i-', // default prefix, do not change
-        }),
-      ],
-      content: {
-        pipeline: {
-          include: ['./src/**/*'],
-        },
-      },
-    }),
     mdx(),
     sitemap(),
     // For details, refer to https://github.com/antfu/unplugin-auto-import#configuration
@@ -119,6 +129,39 @@ export default defineConfig({
         // resolvers: [], // Auto-import using resolvers
         dts: 'components.d.ts',
       }),
+      Unocss({
+        presets: [
+          presetIcons({
+            prefix: 'i-', // default prefix, do not change
+          }),
+        ],
+        content: {
+          pipeline: {
+            /* Please ensure that you update the filenames and paths to accurately match those used in your project. */
+            include: ['./src/**/*'],
+          },
+        },
+      }),
+      {
+        name: 'vuetify-plugin',
+        configResolved(config) {
+          const idx_vue = config.plugins.findIndex(
+            (plugin) => plugin.name && plugin.name === 'vite:vue',
+          )
+          //@ts-ignore
+          config.plugins.splice(
+            idx_vue + 1,
+            0,
+            Vuetify({
+              /* If customizing sass variables of vuetify components */
+              // styles: {
+              //   configFile: 'src/assets/vuetify/settings.scss',
+              // },
+              //...
+            })[0],
+          )
+        },
+      },
       // VueDevTools()
     ],
 
