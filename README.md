@@ -1,8 +1,8 @@
-# Vue Designer Astro Vuetify - Quick start template
+# Vue Designer Astro with CSS - Quick start template
 
-This is a starter template that pre-includes the [Pinegrow Astro Module](https://www.npmjs.com/package/@pinegrow/astro-module), [Vuetify](https://vuetifyjs.com/en/introduction/why-vuetify/), [Pinegrow Vuetify Plugin](https://www.npmjs.com/package/@pinegrow/vuetify-plugin) and other goodies for Vue Designer.
+This is a starter template that pre-includes the [Pinegrow Astro Module](https://www.npmjs.com/package/@pinegrow/astro-module) and other goodies for Vue Designer.
 
-Demo - https://pg-astro-vuetify.netlify.app/
+Demo - https://pg-astro-css.netlify.app/
 
 ## Vue Designer
 
@@ -18,15 +18,15 @@ Clean code 😃, No lock-in - You are in control of your projects and developmen
 
 ### 1. Clone to local
 
-[Create a repo from this template on GitHub](https://github.com/pinegrow/pg-astro-vuetify/generate).
+[Create a repo from this template on GitHub](https://github.com/pinegrow/pg-astro/generate).
 
 (or)
 
 If you prefer to do it manually with the cleaner git history
 
 ```bash
-npx giget@latest gh:pinegrow/pg-astro-vuetify my-astro-vuetify-app #project-name
-cd my-astro-vuetify-app
+npx giget@latest gh:pinegrow/pg-astro my-astro-app #project-name
+cd my-astro-app
 npm install #or use pnpm
 ```
 
@@ -35,8 +35,8 @@ npm install #or use pnpm
 If you prefer a blank template (a single empty home page) instead,
 
 ```bash
-npx giget@latest gh:pinegrow/pg-astro-vuetify#blank my-astro-vuetify-app #project-name
-cd my-astro-vuetify-app
+npx giget@latest gh:pinegrow/pg-astro#blank my-astro-app #project-name
+cd my-astro-app
 npm install #or use pnpm
 ```
 
@@ -60,8 +60,10 @@ npm run build # MPA SSG (islands architecture)
 
 ### Analyze
 
+Uncomment the `rollup-plugin-visualizer` usage in your config file and execute the `build` command. This command will generate `stats.html`. Open `stats.html` in your browser to analyze bundle sizes.
+
 ```bash
-npm run analyze # bundle sizes
+npm run build # open stats.html to analyze bundle sizes
 ```
 
 ### Preview
@@ -79,7 +81,7 @@ npm run unlighthouse # Uses npx unlighthouse from https://unlighthouse.dev/ to r
 ### Deploy to Netlify
 
 You can deploy this repo as a site on your own to explore and experiment with, by clicking this button.
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/Pinegrow/pg-astro-vuetify)
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/Pinegrow/pg-astro)
 
 Check out the [deployment documentation](https://docs.astro.build/en/guides/deploy) for more information.
 
@@ -97,7 +99,7 @@ Check out the [deployment documentation](https://docs.astro.build/en/guides/depl
 
 ### UI Frameworks
 
-- [Vuetify](https://vuetifyjs.com/en/introduction/why-vuetify/) - Hundreds of beautifully handcrafted Vue components, easily customizable with a powerful set of utilities, composables and directives.
+- [CSS](https://vuejs.org/api/sfc-css-features.html) - Scoped CSS in Vue Single File Component (SFC).
 
 ### Icons
 
@@ -106,7 +108,6 @@ Check out the [deployment documentation](https://docs.astro.build/en/guides/depl
 ### Modules/Plugins
 
 - [Pinegrow Astro Module](https://www.npmjs.com/package/@pinegrow/astro-module) - enables you to live-design your Vue single-file components visually in Vue Designer.
-- [Pinegrow Vuetify Plugin](https://www.npmjs.com/package/@pinegrow/vuetify-plugin) - via Design Panel, enables theme customization (optional) and visual controls for Vuetify utilities. Note: This is an addon that's licensed separately to Pinegrow apps (like Vue Designer).
 - 📲 [unplugin-vue-components](https://github.com/antfu/unplugin-vue-components) - On-demand components auto importing for Vue.
 - 📲 [unplugin-auto-import](https://github.com/antfu/unplugin-auto-import) - Auto import APIs on-demand for Vite, Webpack and Rollup.
 - [VueUse](https://vueuse.org/) - collection of essential Vue composition utilities.
@@ -117,7 +118,7 @@ Check out the [deployment documentation](https://docs.astro.build/en/guides/depl
 
 - [Vue Devtools](https://devtools.vuejs.org/guide/installation.html#standalone) - Official devtools that can be used as a standalone app alongside Vue Designer. It's conditionally configured in `app.ts` (only during development).
   - **ACTION REQUIRED**: Currently deactivated. In `app.ts`, uncomment the top devtools related snippet to activate.
-  - ~~[Vite Devtools](https://github.com/webfansplz/vite-plugin-vue-devtools) - A Vite plugin for Vue that enhances your DX (developer experience) with an amazing set of in-app features. This is an in-app alternative to browser-based/standalone Vue Devtools.~~
+- ~~[Vite Devtools](https://github.com/webfansplz/vite-plugin-vue-devtools) - A Vite plugin for Vue that enhances your DX (developer experience) with an amazing set of in-app features. This is an in-app alternative to browser-based/standalone Vue Devtools.~~
   - ~~**ACTION REQUIRED**: Currently deactivated. In `astro.config.mjs`, uncomment VueDevtools.~~
 
 ### VS Code Extensions
