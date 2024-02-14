@@ -20,8 +20,8 @@
           <DarkModeSwitch />
         </div>
       </template>
-      <template #subtitle>
-        <span>Local Favourite</span>
+      <template #subtitle
+        ><span>Local Favourite</span>
         <v-icon
           icon="i-ic-round-local-fire-department"
           class="bg-red-darken-4 ml-2 text-red-darken-2"
@@ -35,12 +35,14 @@
           color="amber-darken-2"
           model-value="4.5"
           half-increments
-        ></v-rating>
-        <span class="ml-2 mt-2 text-caption text-medium-emphasis"
+        ></v-rating
+        ><span class="ml-2 mt-2 text-caption text-medium-emphasis"
           >4.5 (413)</span
         >
       </div>
-      <div class="mt-2 text-subtitle-1"><span>$ . Italian, Cafe</span></div>
+      <div class="mt-2 text-subtitle-1">
+        <span>$ . Italian, Cafe</span>
+      </div>
     </v-card-item>
     <v-card-text>
       <div class="mt-1">
@@ -52,9 +54,7 @@
       <v-divider class="mt-4"></v-divider>
     </v-card-text>
     <v-card-item>
-      <template #title>
-        <span>Tonight's availability</span>
-      </template>
+      <template #title><span>Tonight's availability</span> </template>
       <v-chip-group v-model="selectedTimeSlot" class="mt-2">
         <v-chip
           v-for="(timeSlot, index) in availableTimeSlots"
@@ -70,8 +70,8 @@
         class="mb-2 ml-2"
         @click="showStatus(true)"
       ></v-btn>
-      <v-snackbar v-model="statusDisplay" timeout="2000">
-        <span class="text-white w-100"
+      <v-snackbar v-model="statusDisplay" timeout="2000"
+        ><span class="text-white w-100"
           >{{ availableTimeSlots[selectedTimeSlot] }} was reserved.</span
         >
       </v-snackbar>

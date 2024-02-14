@@ -7,7 +7,6 @@
   const app = getCurrentInstance().appContext.app
   app.use(vuetify)
 </script>
-
 <template>
   <div>
     <!-- <div class="container mx-auto"> -->
@@ -29,5 +28,4 @@
     <!-- </div> -->
   </div>
 </template>
-
 <style></style>
