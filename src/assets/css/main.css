@@ -1,0 +1,12 @@
+/* Global styles */
+
+html {
+  /* Import fonts if required, and update the list accordingly */
+  /* font-family: 'Proza Libre', 'Inter var', 'Inter', 'Roboto', 'Helvetica Neue',
+    sans-serif; */
+}
+
+* {
+  -webkit-font-smoothing: auto;
+  -moz-osx-font-smoothing: auto;
+}

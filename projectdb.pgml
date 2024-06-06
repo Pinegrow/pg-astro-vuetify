@@ -1,0 +1,49 @@
+<project>
+    <documents></documents>
+    <dmdesigns>
+        <dmdesign>
+            <dmdesignskill skill="vuetify.colors">
+                <dmcolor key="primary" color="rgb(178,77,57)" shade-50="#f5edec" shade-100="#eed2cc" shade-200="#e5b7ad" shade-300="#da9c8e" shade-400="#ce8271" shade-500="#c16854" shade-600="rgb(178,77,57)" shade-700="#a34734" shade-800="#94402f" shade-900="#863a2b" shade-950="#773426" shade-DEFAULT="#692e22"/>
+                <dmcolor key="secondary" color="rgb(120,60,27)" shade-50="#f0eceb" shade-100="#decdc5" shade-200="#ccaea0" shade-300="#b8907d" shade-400="#a4735b" shade-500="#8e573a" shade-600="rgb(120,60,27)" shade-700="#6e3719" shade-800="#643217" shade-900="#5a2d14" shade-950="#502812" shade-DEFAULT="#472310"/>
+                <dmcolor key="tertiary" color="rgb(212,188,147)" shade-50="#f9f6f2" shade-100="#f3ece2" shade-200="#ede2d2" shade-300="#e7d9c2" shade-400="#e1cfb2" shade-500="#dbc5a2" shade-600="rgb(212,188,147)" shade-700="#c2ac87" shade-800="#b09c7a" shade-900="#9f8d6e" shade-950="#8e7e63" shade-DEFAULT="#7d6f57"/>
+                <dmcolor key="success" color="#2e7d32" shade-50="#ecf0ec" shade-100="#cdddcb" shade-200="#aec9ab" shade-300="#90b68c" shade-400="#71a36d" shade-500="#519050" shade-600="#2e7d32" shade-700="#2a722e" shade-800="#26682a" shade-900="#235e26" shade-950="#1f5422" shade-DEFAULT="#519050"/>
+                <dmcolor key="warning" color="#ed6c02" shade-50="#fcefeb" shade-100="#ffd9c7" shade-200="#ffc4a4" shade-300="#ffae7f" shade-400="#fb985c" shade-500="#f58238" shade-600="#ed6c02" shade-700="#d96302" shade-800="#c55a02" shade-900="#b25102" shade-950="#9f4801" shade-DEFAULT="#f58238"/>
+                <dmcolor key="error" color="#d32f2f" shade-50="#f9ecec" shade-100="#f9cfca" shade-200="#f6b2a9" shade-300="#f19488" shade-400="#e97669" shade-500="#df564c" shade-600="#d32f2f" shade-700="#c12b2b" shade-800="#b02727" shade-900="#9e2323" shade-950="#8d2020" shade-DEFAULT="#df564c"/>
+                <dmcolor key="info" color="#0288d1" shade-50="#ebf1f9" shade-100="#d0dff2" shade-200="#b4ccec" shade-300="#96bbe5" shade-400="#76a9df" shade-500="#5098d8" shade-600="#0288d1" shade-700="#027cbf" shade-800="#0271ae" shade-900="#02669d" shade-950="#015b8c" shade-DEFAULT="#5098d8"/>
+                <dmcolor key="neutral" color="#1b1b1b" shade-50="#ebebeb" shade-100="#c4c4c4" shade-200="#9f9f9f" shade-300="#7b7b7b" shade-400="#585858" shade-500="#383838" shade-600="#1b1b1b" shade-700="#191919" shade-800="#171717" shade-900="#151515" shade-950="#131313" shade-DEFAULT="#101010"/>
+            </dmdesignskill>
+            <dmdesignskill skill="fonts" family_1="Inter" family_2="Caveat Brush" family_3="" name_3=""></dmdesignskill>
+            <dmdesignskill skill="background" image_for_colors advanced="true" filter_blur="0" filter_brightness="100" filter_contrast="100" filter_grayscale="0" filter_hue-rotate="0" filter_invert="0" filter_opacity="100" filter_saturate="100" filter_sepia="0" image="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?crop=entropy&cs=srgb&fm=jpg&ixid=M3wyMDkyMnwwfDF8c2VhcmNofDh8fGNhZmV8ZW58MHx8fHwxNjk1MDQ4NTI4fDA&ixlib=rb-4.0.3&q=85" keyword="cafe"></dmdesignskill>
+        </dmdesign>
+        <dmdesign>
+            <dmdesignskill skill="vuetify.colors">
+                <dmcolor key="primary" color="rgb(197,152,119)" shade-50="#f7f2f0" shade-100="#f0e3db" shade-200="#e8d3c6" shade-300="#e0c4b2" shade-400="#d7b59e" shade-500="#cea78a" shade-600="rgb(197,152,119)" shade-700="#b48b6d" shade-800="#a47e63" shade-900="#947259" shade-950="#846650" shade-DEFAULT="#755a46"/>
+                <dmcolor key="secondary" color="rgb(92,62,39)" shade-50="#eeecec" shade-100="#d5cdc7" shade-200="#bdaea5" shade-300="#a59083" shade-400="#8c7463" shade-500="#745844" shade-600="rgb(92,62,39)" shade-700="#543924" shade-800="#4d3421" shade-900="#452f1d" shade-950="#3e2a1a" shade-DEFAULT="#362517"/>
+                <dmcolor key="tertiary" color="rgb(177,202,228)" shade-50="#f5f8fb" shade-100="#eaf0f7" shade-200="#dee8f3" shade-300="#d3e1f0" shade-400="#c8d9ec" shade-500="#bcd1e8" shade-600="rgb(177,202,228)" shade-700="#a2b9d1" shade-800="#93a8be" shade-900="#8598ab" shade-950="#778799" shade-DEFAULT="#697887"/>
+                <dmcolor key="success" color="#2e7d32" shade-50="#ecf0ec" shade-100="#cdddcb" shade-200="#aec9ab" shade-300="#90b68c" shade-400="#71a36d" shade-500="#519050" shade-600="#2e7d32" shade-700="#2a722e" shade-800="#26682a" shade-900="#235e26" shade-950="#1f5422" shade-DEFAULT="#519050"/>
+                <dmcolor key="warning" color="#ed6c02" shade-50="#fcefeb" shade-100="#ffd9c7" shade-200="#ffc4a4" shade-300="#ffae7f" shade-400="#fb985c" shade-500="#f58238" shade-600="#ed6c02" shade-700="#d96302" shade-800="#c55a02" shade-900="#b25102" shade-950="#9f4801" shade-DEFAULT="#f58238"/>
+                <dmcolor key="error" color="#d32f2f" shade-50="#f9ecec" shade-100="#f9cfca" shade-200="#f6b2a9" shade-300="#f19488" shade-400="#e97669" shade-500="#df564c" shade-600="#d32f2f" shade-700="#c12b2b" shade-800="#b02727" shade-900="#9e2323" shade-950="#8d2020" shade-DEFAULT="#df564c"/>
+                <dmcolor key="info" color="#0288d1" shade-50="#ebf1f9" shade-100="#d0dff2" shade-200="#b4ccec" shade-300="#96bbe5" shade-400="#76a9df" shade-500="#5098d8" shade-600="#0288d1" shade-700="#027cbf" shade-800="#0271ae" shade-900="#02669d" shade-950="#015b8c" shade-DEFAULT="#5098d8"/>
+                <dmcolor key="neutral" color="#1b1b1b" shade-50="#ebebeb" shade-100="#c4c4c4" shade-200="#9f9f9f" shade-300="#7b7b7b" shade-400="#585858" shade-500="#383838" shade-600="#1b1b1b" shade-700="#191919" shade-800="#171717" shade-900="#151515" shade-950="#131313" shade-DEFAULT="#101010"/>
+            </dmdesignskill>
+            <dmdesignskill skill="fonts" family_1="Inter" family_2="Caveat Brush" family_3="" name_3=""></dmdesignskill>
+            <dmdesignskill skill="background" image_for_colors advanced="true" filter_blur="0" filter_brightness="100" filter_contrast="100" filter_grayscale="0" filter_hue-rotate="0" filter_invert="0" filter_opacity="100" filter_saturate="100" filter_sepia="0" image="https://images.unsplash.com/photo-1567880905822-56f8e06fe630?ixid=M3wyMDkyMnwwfDF8c2VhcmNofDN8fGNhZmV8ZW58MHx8fHwxNjk1MDkzNTk5fDA&ixlib=rb-4.0.3q=85&fm=jpg&crop=faces&cs=srgb&w=1200&fit=max" keyword="cafe"></dmdesignskill>
+        </dmdesign>
+        <dmdesign active>
+            <dmdesignskill skill="vuetify.colors">
+                <dmcolor key="primary" color="rgb(234,41,58)" shade-50="#fcecec" shade-100="#ffd0cc" shade-200="#ffb4ad" shade-300="#fe968e" shade-400="#f97871" shade-500="#f35655" shade-600="rgb(234,41,58)" shade-700="#d62635" shade-800="#c32230" shade-900="#b01f2c" shade-950="#9d1c27" shade-DEFAULT="#8a1822"/>
+                <dmcolor key="secondary" color="rgb(118,49,16)" shade-50="#efeceb" shade-100="#decbc3" shade-200="#ccaa9c" shade-300="#b98b77" shade-400="#a46c53" shade-500="#8e4e31" shade-600="rgb(118,49,16)" shade-700="#6c2d0f" shade-800="#62290e" shade-900="#58250d" shade-950="#4f210c" shade-DEFAULT="#461d09"/>
+                <dmcolor key="tertiary" color="rgb(246,180,133)" shade-50="#fef5f1" shade-100="#feeade" shade-200="#fedfcc" shade-300="#fdd4ba" shade-400="#fbc9a8" shade-500="#f9bf97" shade-600="rgb(246,180,133)" shade-700="#e1a57a" shade-800="#cd966f" shade-900="#b98764" shade-950="#a57959" shade-DEFAULT="#926a4f"/>
+                <dmcolor key="success" color="#2e7d32" shade-50="#ecf0ec" shade-100="#cdddcb" shade-200="#aec9ab" shade-300="#90b68c" shade-400="#71a36d" shade-500="#519050" shade-600="#2e7d32" shade-700="#2a722e" shade-800="#26682a" shade-900="#235e26" shade-950="#1f5422" shade-DEFAULT="#519050"/>
+                <dmcolor key="warning" color="#ed6c02" shade-50="#fcefeb" shade-100="#ffd9c7" shade-200="#ffc4a4" shade-300="#ffae7f" shade-400="#fb985c" shade-500="#f58238" shade-600="#ed6c02" shade-700="#d96302" shade-800="#c55a02" shade-900="#b25102" shade-950="#9f4801" shade-DEFAULT="#f58238"/>
+                <dmcolor key="error" color="#d32f2f" shade-50="#f9ecec" shade-100="#f9cfca" shade-200="#f6b2a9" shade-300="#f19488" shade-400="#e97669" shade-500="#df564c" shade-600="#d32f2f" shade-700="#c12b2b" shade-800="#b02727" shade-900="#9e2323" shade-950="#8d2020" shade-DEFAULT="#df564c"/>
+                <dmcolor key="info" color="#0288d1" shade-50="#ebf1f9" shade-100="#d0dff2" shade-200="#b4ccec" shade-300="#96bbe5" shade-400="#76a9df" shade-500="#5098d8" shade-600="#0288d1" shade-700="#027cbf" shade-800="#0271ae" shade-900="#02669d" shade-950="#015b8c" shade-DEFAULT="#5098d8"/>
+                <dmcolor key="neutral" color="#1b1b1b" shade-50="#ebebeb" shade-100="#c4c4c4" shade-200="#9f9f9f" shade-300="#7b7b7b" shade-400="#585858" shade-500="#383838" shade-600="#1b1b1b" shade-700="#191919" shade-800="#171717" shade-900="#151515" shade-950="#131313" shade-DEFAULT="#101010"/>
+            </dmdesignskill>
+            <dmdesignskill skill="fonts" family_1="Inter" family_2="Caveat Brush" family_3="" name_3=""></dmdesignskill>
+            <dmdesignskill skill="background" image_for_colors advanced="true" filter_blur="0" filter_brightness="100" filter_contrast="100" filter_grayscale="0" filter_hue-rotate="0" filter_invert="0" filter_opacity="100" filter_saturate="100" filter_sepia="0" image="https://images.unsplash.com/photo-1654870468927-92c943da24fe?crop=entropy&cs=srgb&fm=jpg&ixid=M3wyMDkyMnwwfDF8c2VhcmNofDQ5fHxiYWtlcnklMjBjYWtlfGVufDB8fHx8MTY5NTA5NzYyNXww&ixlib=rb-4.0.3&q=85" keyword="cafe"></dmdesignskill>
+        </dmdesign>
+    </dmdesigns>
+    <dmlocked vuetify-colors-primary="false" vuetify-colors-secondary="false" vuetify-colors-tertiary="false" vuetify-colors-success="true" vuetify-colors-warning="true" vuetify-colors-error="true" vuetify-colors-info="true" vuetify-colors-neutral="true"
+    fonts-family_2="true" fonts-family_1="true"></dmlocked>
+</project>
