@@ -1,8 +1,10 @@
-import { pg_font_urls } from '../../themes/pg-vuetify/tokens.mjs'
+const pg_font_urls =
+  'https://fonts.googleapis.com/css?family=Inter:100,200,300,400,500,600,700,800,900|Kalam:300,400,700&display=swap'
 
 const getFontsWithFallback = (pg_fonts) => {
   const pg_fonts_with_fallback = { ...pg_fonts }
   Object.entries(pg_fonts_with_fallback).forEach(([key, val]) => {
+    //@ts-ignore
     if (val?.length) {
       pg_fonts_with_fallback[key] = pg_fonts_with_fallback[key].map((font) => {
         const fontTokens = font.split(',')
