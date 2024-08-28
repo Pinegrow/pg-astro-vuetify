@@ -12,7 +12,7 @@ import AutoImportComponents from 'unplugin-vue-components/vite'
 import AutoImportAPIs from 'unplugin-auto-import/astro'
 import Unocss from 'unocss/vite'
 import presetIcons from '@unocss/preset-icons'
-import VueDevTools from 'vite-plugin-vue-devtools'
+// import VueDevTools from 'vite-plugin-vue-devtools'
 // import myAstroModule from './src/modules/my-module'
 
 // import { visualizer } from 'rollup-plugin-visualizer'
@@ -31,25 +31,7 @@ export default defineConfig({
       appEntrypoint: '/src/app',
       template: {
         // https://github.com/vuetifyjs/vuetify-loader/tree/master/packages/vite-plugin#image-loading
-        transformAssetUrls: {
-          ...transformAssetUrls,
-          'v-carousel-item': [
-            'src',
-            'lazySrc',
-            'srcset',
-            ':src',
-            ':lazySrc',
-            ':srcset',
-          ],
-          'v-card': [
-            'image',
-            'prependAvatar',
-            'appendAvatar',
-            ':image',
-            ':prependAvatar',
-            ':appendAvatar',
-          ],
-        },
+        transformAssetUrls,
         compilerOptions: {
           isCustomElement: (tag) => tag === 'lite-youtube',
         },
@@ -118,6 +100,27 @@ export default defineConfig({
         // ],
       },
     }),
+    {
+      // When added as an integration, we can ensure that vuetify plugin gets added after the vue vite plugin
+      name: 'vuetify-plugin',
+      hooks: {
+        'astro:config:setup': async ({ updateConfig }) => {
+          updateConfig({
+            vite: {
+              plugins: [
+                Vuetify({
+                  /* If customizing sass variables of vuetify components */
+                  // styles: {
+                  //   configFile: 'src/assets/vuetify/settings.scss',
+                  // },
+                  //...
+                }),
+              ],
+            },
+          })
+        },
+      },
+    },
   ],
   vite: {
     plugins: [
@@ -144,29 +147,9 @@ export default defineConfig({
           },
         },
       }),
-      {
-        name: 'vuetify-plugin',
-        configResolved(config) {
-          const idx_vue = config.plugins.findIndex(
-            (plugin) => plugin.name && plugin.name === 'vite:vue',
-          )
-          //@ts-ignore
-          config.plugins.splice(
-            idx_vue + 1,
-            0,
-            Vuetify({
-              /* If customizing sass variables of vuetify components */
-              // styles: {
-              //   configFile: 'src/assets/vuetify/settings.scss',
-              // },
-              //...
-            })[0],
-          )
-        },
-      },
-      VueDevTools({
-        appendTo: 'app.ts',
-      }),
+      // VueDevTools({
+      //   appendTo: 'app.ts',
+      // }),
     ],
 
     // build: {
