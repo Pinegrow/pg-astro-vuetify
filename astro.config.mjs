@@ -110,9 +110,9 @@ export default defineConfig({
               plugins: [
                 Vuetify({
                   /* If customizing sass variables of vuetify components */
-                  // styles: {
-                  //   configFile: 'src/assets/vuetify/settings.scss',
-                  // },
+                  styles: {
+                    configFile: 'src/assets/vuetify/settings.scss',
+                  },
                   //...
                 }),
               ],
@@ -168,6 +168,14 @@ export default defineConfig({
         '@': fileURLToPath(new URL('./src', import.meta.url)),
         '~': fileURLToPath(new URL('./src', import.meta.url)),
         '~~': fileURLToPath(new URL('./', import.meta.url)),
+      },
+    },
+
+    css: {
+      preprocessorOptions: {
+        sass: {
+          api: 'modern-compiler',
+        },
       },
     },
   },
