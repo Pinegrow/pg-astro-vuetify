@@ -12,7 +12,6 @@ import AutoImportComponents from 'unplugin-vue-components/vite'
 import AutoImportAPIs from 'unplugin-auto-import/astro'
 import Unocss from 'unocss/vite'
 import presetIcons from '@unocss/preset-icons'
-// import VueDevTools from 'vite-plugin-vue-devtools'
 // import myAstroModule from './src/modules/my-module'
 
 // import { visualizer } from 'rollup-plugin-visualizer'
@@ -29,6 +28,7 @@ export default defineConfig({
     // myAstroModule,
     vue({
       appEntrypoint: '/src/app',
+      devtools: true,
       template: {
         // https://github.com/vuetifyjs/vuetify-loader/tree/master/packages/vite-plugin#image-loading
         transformAssetUrls,
@@ -80,7 +80,6 @@ export default defineConfig({
     Pinegrow({
       liveDesigner: {
         iconPreferredCase: 'unocss', // default value (can be removed), unocss by default uses the unocss format for icon names
-        devtoolsKey: 'devtoolsKey', // see app.ts
         vuetify: {
           /* Please ensure that you update the filenames and paths to accurately match those used in your project. */
           configPath: 'vuetify.config.ts', // or file where vuetify is created
@@ -147,9 +146,6 @@ export default defineConfig({
           },
         },
       }),
-      // VueDevTools({
-      //   appendTo: 'app.ts',
-      // }),
     ],
 
     // build: {
