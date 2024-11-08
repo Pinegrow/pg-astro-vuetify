@@ -55,7 +55,7 @@
     </v-card-text>
     <v-card-item>
       <template #title><span>Tonight's availability</span> </template>
-      <v-chip-group v-model="selectedTimeSlot" class="mt-2">
+      <v-chip-group v-model="selectedTimeSlot" class="mt-2" mandatory>
         <v-chip
           v-for="(timeSlot, index) in availableTimeSlots"
           :key="index"
