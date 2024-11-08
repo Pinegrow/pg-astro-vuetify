@@ -9,7 +9,7 @@ export default {
   logo: 'i-vscode-icons:file-type-coffeelint',
   author: 'Pinegrow',
   url: 'https://pg-astro-vuetify.netlify.app',
-  github: 'https://github.com/pinegrow/pg-nuxt-vuetify',
+  github: 'https://github.com/pinegrow/pg-astro-vuetify',
   defaultLocale: 'en', // default
   identity: {
     type: 'Organization',
