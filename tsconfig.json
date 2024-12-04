@@ -4,7 +4,7 @@
     "target": "esnext",
     "useDefineForClassFields": true,
     "module": "esnext",
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "isolatedModules": true,
     "jsx": "preserve",
     "sourceMap": true,
@@ -16,7 +16,7 @@
       "~/*": ["src/*"],
       "~~/*": ["*"]
     },
-    "types": ["node", "vuetify"],
+    "types": ["node"],
     "jsxImportSource": "solid-js",
     "lib": ["esnext", "dom", "dom.iterable", "scripthost"],
     "skipLibCheck": true,

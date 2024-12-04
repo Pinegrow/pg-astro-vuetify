@@ -1,0 +1,151 @@
+{
+  "files": {
+    "src/components/TheCounter.vue": {
+      "frameworks": [
+        "vite-plugin-vue-devtools",
+        "pg.insight.events",
+        "pg.vue.tree.painter",
+        "@vue/devtools",
+        "pg.css.grid",
+        "unplugin-auto-import",
+        "pg.image.overlay",
+        "pg.code-validator",
+        "@pinegrow/astro-module",
+        "@unocss/preset-icons",
+        "unplugin-vue-components",
+        "pg.project.items",
+        "@astrojs/vue",
+        "pg.asset.manager",
+        "app_designer",
+        "vue",
+        "astro",
+        "project",
+        "vuetify",
+        "vuetify",
+        "vuetify",
+        "vuetify",
+        "vuetify",
+        "pg.html"
+      ]
+    },
+    "src/components/SampleCard.vue": {
+      "frameworks": [
+        "vite-plugin-vue-devtools",
+        "pg.insight.events",
+        "pg.vue.tree.painter",
+        "project",
+        "pg.css.grid",
+        "pg.image.overlay",
+        "pg.code-validator",
+        "pg.project.items",
+        "pg.asset.manager",
+        "app_designer",
+        "vue",
+        "astro",
+        "@astrojs/vue",
+        "@pinegrow/astro-module",
+        "unplugin-vue-components",
+        "unplugin-auto-import",
+        "@unocss/preset-icons",
+        "@vue/devtools",
+        "tw.flowbite",
+        "vuetify",
+        "pg.html"
+      ]
+    },
+    "src/components/DarkModeSwitch.vue": {
+      "frameworks": [
+        "vite-plugin-vue-devtools",
+        "pg.insight.events",
+        "@vue/devtools",
+        "pg.vue.tree.painter",
+        "@unocss/preset-icons",
+        "unplugin-auto-import",
+        "pg.css.grid",
+        "unplugin-vue-components",
+        "pg.image.overlay",
+        "project",
+        "@pinegrow/astro-module",
+        "pg.code-validator",
+        "@astrojs/vue",
+        "pg.project.items",
+        "astro",
+        "pg.asset.manager",
+        "vue",
+        "app_designer",
+        "vuetify",
+        "pg.html"
+      ]
+    },
+    "src/components/PageHome.vue": {
+      "frameworks": [
+        "vite-plugin-vue-devtools",
+        "pg.insight.events",
+        "pg.vue.tree.painter",
+        "project",
+        "pg.css.grid",
+        "pg.image.overlay",
+        "pg.code-validator",
+        "pg.project.items",
+        "pg.asset.manager",
+        "app_designer",
+        "astro",
+        "@astrojs/vue",
+        "@pinegrow/astro-module",
+        "@vue/devtools",
+        "vue",
+        "unplugin-vue-components",
+        "unplugin-auto-import",
+        "@unocss/preset-icons",
+        "tw.flowbite",
+        "vuetify",
+        "pg.html"
+      ]
+    }
+  },
+  "template_framework_id": "vue",
+  "open-pages": ["src/components/PageHome.vue"],
+  "breakpoints": ["600px", "960px", "1280px", "1920px", "2560px"],
+  "frameworks": [
+    "vite-plugin-vue-devtools",
+    "pg.insight.events",
+    "pg.vue.tree.painter",
+    "project",
+    "pg.css.grid",
+    "pg.image.overlay",
+    "pg.code-validator",
+    "pg.project.items",
+    "pg.asset.manager",
+    "app_designer",
+    "astro",
+    "@astrojs/vue",
+    "@pinegrow/astro-module",
+    "@vue/devtools",
+    "vue",
+    "unplugin-vue-components",
+    "unplugin-auto-import",
+    "@unocss/preset-icons",
+    "tw.flowbite",
+    "vuetify",
+    "pg.html"
+  ],
+  "urls": {
+    "src/components/TheCounter.vue": {
+      "open-page-views": [{ "w": 1024, "h": 0 }]
+    },
+    "src/components/SampleCard.vue": {
+      "open-page-views": [{ "w": 1024, "h": 0 }]
+    },
+    "src/components/DarkModeSwitch.vue": {
+      "open-page-views": [{ "w": 1024, "h": 0 }]
+    },
+    "http://localhost:3001/": { "open-page-views": [{ "w": 1024, "h": 0 }] },
+    "chrome-error://chromewebdata/": {
+      "open-page-views": [{ "w": 1024, "h": 0 }]
+    },
+    "src/components/PageHome.vue": {
+      "open-page-views": [{ "w": 1010, "h": 0 }]
+    }
+  },
+  "active-design-provider": "vuetify"
+}
