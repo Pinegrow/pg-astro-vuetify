@@ -104,7 +104,10 @@
     }
   },
   "template_framework_id": "vue",
-  "open-pages": ["src/components/PageHome.vue"],
+  "open-pages": [
+    "src/components/PageHome.vue",
+    "src/components/SampleCard.vue"
+  ],
   "breakpoints": ["600px", "960px", "1280px", "1920px", "2560px"],
   "frameworks": [
     "vite-plugin-vue-devtools",
