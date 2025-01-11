@@ -3,8 +3,10 @@ import BaseHead from '@/components/BaseHead.astro'
 
 // import Header from '@/components/Header.astro'
 // import Footer from '@/components/Footer.astro'
-import {SITE_TITLE, SITE_DESCRIPTION} from '@/consts'
+import siteMeta from '@/site'
 import { heroImageUrl } from "@/utils/hero";
+
+const {title: SITE_TITLE, description: SITE_DESCRIPTION} = siteMeta
 
 export interface Props {
   title: string

@@ -22,8 +22,8 @@ import presetIcons from '@unocss/preset-icons'
 
 import Vuetify, { transformAssetUrls } from 'vite-plugin-vuetify'
 
-import site from './src/site'
-const { url } = site
+import siteMeta from './src/site'
+const { url } = siteMeta
 
 // https://astro.build/config
 export default defineConfig({
