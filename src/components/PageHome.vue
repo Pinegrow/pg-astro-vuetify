@@ -11,7 +11,22 @@
         Navbar contains all nav components such as v-app-bar, v-system-bar, v-navigation-drawer, v-bottom-navigation -->
       <!-- <NavBar /> -->
       <v-main class="py-4">
-        <SampleCard />
+        <div>
+          <div
+            style="
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+              justify-content: center;
+              padding-top: 1.5rem /* 24px */;
+              padding-bottom: 1.5rem /* 24px */;
+            "
+          >
+            <slot /><span style="margin-left: 0.5rem; /* 8px */"
+              >A Fresh Start!</span
+            >
+          </div>
+        </div>
       </v-main>
       <!-- https://vuetifyjs.com/en/features/application-layout/
         TheFooter contains the v-footer -->
