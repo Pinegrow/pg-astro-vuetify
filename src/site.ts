@@ -5,8 +5,7 @@
 export default {
   title: 'Vue Designer',
   description: 'Vue Designer Astro Vuetify - Quick start template',
-  // logo: 'i-emojione-rocket',
-  logo: 'i-vscode-icons:file-type-coffeelint',
+  logo: 'i-emojione-rocket',
   author: 'Pinegrow',
   url: 'https://pg-astro-vuetify.netlify.app',
   github: 'https://github.com/pinegrow/pg-astro-vuetify',
@@ -17,6 +16,7 @@ export default {
   twitter: '@vuedesigner',
   trailingSlash: false, // default
   titleSeparator: '|', // default
+
   navs: {
     primary: [
       {
