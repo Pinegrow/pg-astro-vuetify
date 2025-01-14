@@ -1,6 +1,4 @@
 import { EventEmitter } from 'events'
-// Increasing the maxListeners from default 10 to 15 as there are more than 10 vite plugins (mostly vite/astro) ones using fswatcher
-EventEmitter.defaultMaxListeners = 15
 
 import { fileURLToPath, URL } from 'node:url'
 import { defineConfig } from 'astro/config'
@@ -16,6 +14,8 @@ import AutoImportComponents from 'unplugin-vue-components/vite'
 import AutoImportAPIs from 'unplugin-auto-import/astro'
 import Unocss from 'unocss/vite'
 import presetIcons from '@unocss/preset-icons'
+import { unheadVueComposablesImports } from '@unhead/vue'
+
 // import myAstroModule from './src/modules/my-module'
 
 // import { visualizer } from 'rollup-plugin-visualizer'
@@ -23,6 +23,8 @@ import presetIcons from '@unocss/preset-icons'
 import Vuetify, { transformAssetUrls } from 'vite-plugin-vuetify'
 
 import siteMeta from './src/site'
+// Increasing the maxListeners from default 10 to 15 as there are more than 10 vite plugins (mostly vite/astro) ones using fswatcher
+EventEmitter.defaultMaxListeners = 15
 const { url } = siteMeta
 
 // https://astro.build/config
@@ -68,8 +70,8 @@ export default defineConfig({
         // 'vue-router',
         // 'vue-i18n',
         // 'vue/macros',
-        // '@vueuse/head',
-        // '@vueuse/core',
+        unheadVueComposablesImports,
+        '@vueuse/core',
         'pinia',
       ],
       dirs: [
@@ -153,6 +155,10 @@ export default defineConfig({
       }),
     ],
 
+    ssr: {
+      noExternal: ['vuetify'],
+    },
+
     // build: {
     //   // Vite uses Rollup under the hold, so rollup options & plugins can be used for advanced usage
     //   rollupOptions: {
@@ -169,6 +175,14 @@ export default defineConfig({
         '@': fileURLToPath(new URL('./src', import.meta.url)),
         '~': fileURLToPath(new URL('./src', import.meta.url)),
         '~~': fileURLToPath(new URL('./', import.meta.url)),
+      },
+    },
+
+    css: {
+      preprocessorOptions: {
+        sass: {
+          api: 'modern-compiler',
+        },
       },
     },
   },
