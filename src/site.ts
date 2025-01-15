@@ -26,11 +26,11 @@ export default {
       },
     ],
     secondary: [
-      {
-        title: 'Subscribe',
-        icon: 'i-mdi-home',
-        to: '/subscribe',
-      },
+      // {
+      //   title: 'Subscribe',
+      //   icon: 'i-mdi-home',
+      //   to: '/subscribe',
+      // },
     ],
   },
 }
